@@ -14,6 +14,7 @@
 		C14953BE1C1DE50200F14E06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14953BC1C1DE50200F14E06 /* LaunchScreen.storyboard */; };
 		C14953C91C1DE50200F14E06 /* Age_Of_LaikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14953C81C1DE50200F14E06 /* Age_Of_LaikaTests.swift */; };
 		C14953D41C1DE50200F14E06 /* Age_Of_LaikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14953D31C1DE50200F14E06 /* Age_Of_LaikaUITests.swift */; };
+		C14953E21C1DE54D00F14E06 /* AgeOfLaika.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C14953E11C1DE54D00F14E06 /* AgeOfLaika.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C14953CF1C1DE50200F14E06 /* Age Of LaikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Age Of LaikaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14953D31C1DE50200F14E06 /* Age_Of_LaikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Age_Of_LaikaUITests.swift; sourceTree = "<group>"; };
 		C14953D51C1DE50200F14E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C14953E11C1DE54D00F14E06 /* AgeOfLaika.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AgeOfLaika.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				C14953B31C1DE50200F14E06 /* AppDelegate.swift */,
 				C14953B51C1DE50200F14E06 /* ViewController.swift */,
 				C14953B71C1DE50200F14E06 /* Main.storyboard */,
+				C14953E11C1DE54D00F14E06 /* AgeOfLaika.jpg */,
 				C14953BA1C1DE50200F14E06 /* Assets.xcassets */,
 				C14953BC1C1DE50200F14E06 /* LaunchScreen.storyboard */,
 				C14953BF1C1DE50200F14E06 /* Info.plist */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C14953BE1C1DE50200F14E06 /* LaunchScreen.storyboard in Resources */,
+				C14953E21C1DE54D00F14E06 /* AgeOfLaika.jpg in Resources */,
 				C14953BB1C1DE50200F14E06 /* Assets.xcassets in Resources */,
 				C14953B91C1DE50200F14E06 /* Main.storyboard in Resources */,
 			);
@@ -332,6 +336,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -353,6 +358,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -377,6 +383,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -392,6 +399,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				New_Setting = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -402,10 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Age Of Laika/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Age-Of-Laika";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.age-of-laika";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -413,10 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Age Of Laika/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Age-Of-Laika";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.age-of-laika";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -487,6 +501,7 @@
 				C14953DA1C1DE50200F14E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C14953DB1C1DE50200F14E06 /* Build configuration list for PBXNativeTarget "Age Of LaikaTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +510,7 @@
 				C14953DD1C1DE50200F14E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C14953DE1C1DE50200F14E06 /* Build configuration list for PBXNativeTarget "Age Of LaikaUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +519,7 @@
 				C14953E01C1DE50200F14E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
