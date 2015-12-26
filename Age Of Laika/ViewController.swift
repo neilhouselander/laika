@@ -19,69 +19,80 @@ class ViewController: UIViewController {
     //convert age button
     @IBAction func convertToDogButtonPressed(sender: UIButton)
     {
-        //error handling goes here e.g. no name or age
+//error handling goes here e.g. no name or age
         
-        if (dogNameTextField.text == "")
+//BOTH FIELDS MISSING
+        if (dogNameTextField.text == "") && (ageInHumanTextField.text == "")
         {
-        //set up the error label
-        ageInDogLabel.text = "Need a name please!"
-            
-        //show the label
-        ageInDogLabel.hidden = false
-            
-        //hide convert button & show convert another
+            ageInDogLabel.text = "You need to type something!"
+            ageInDogLabel.hidden = false
+            ageInHumanTextField.resignFirstResponder()
             convertToDogButtonOutlet.hidden = true
             covertAnotherButtonOutlet.hidden = false
-        
         }
+
+//JUST NAME MISSING
+      else if (dogNameTextField.text == "")
+        {
+        ageInDogLabel.text = "Need a name please!"
+        ageInDogLabel.hidden = false
+        convertToDogButtonOutlet.hidden = true
+        covertAnotherButtonOutlet.hidden = false
+        }
+            
+//JUST AGE MISSING
         else if (ageInHumanTextField.text == "")
         {
-            //set up the error label
-            ageInDogLabel.text = "Need an age please!"
+        ageInDogLabel.text = "Need an age please!"
+        ageInDogLabel.hidden = false
+        convertToDogButtonOutlet.hidden = true
+        covertAnotherButtonOutlet.hidden = false
+         }
             
-            //show the label
-            ageInDogLabel.hidden = false
-            
-            //hide convert button & show convert another
-            convertToDogButtonOutlet.hidden = true
-            covertAnotherButtonOutlet.hidden = false
-        }
-        else{
-            
-            //grab the number & then the name
-            //NEED ERROR HANDLING HERE IF LETTERS ENTERED
+//ALL COMPLETED
+        else
+        {
+            //grab the age
             let humanYears = Double(ageInHumanTextField.text!)
             let dogName = dogNameTextField.text
             var answer: Double
             
-            //convert and output. Logic-> dogs age 10.5 years per year 1st 2 years, then 4 years for each year
+            //handles non-numbers in age field
+            if humanYears == nil
+            {
+                ageInDogLabel.text = "Needs to be numbers!"
+                ageInDogLabel.hidden = false
+                ageInHumanTextField.resignFirstResponder()
+                convertToDogButtonOutlet.hidden = true
+                covertAnotherButtonOutlet.hidden = false
+            }
+                
+            else
+            {
+//convert and output. Logic-> dogs age 10.5 years per year 1st 2 years, then 4 years for each year
             
             if humanYears <= 2
-            {
-                answer = humanYears! * 10.5
-            }
-            else{
-                answer = ((humanYears! - 2) * 4 ) + 21
-            }
+                {
+                    answer = humanYears! * 10.5
+                }
+                
+            else
+                {
+                    answer = ((humanYears! - 2) * 4 ) + 21
+                }
             
-            ageInDogLabel.text = "\(dogName! ) is \(answer ) years old !"
-            
-            //tidy up
-            ageInHumanTextField.resignFirstResponder()
-            
-            //hide the text fields
-            ageInHumanTextField.hidden = true
+            ageInDogLabel.text = "\(dogName! ) is \(answer ) years old !" //output the answer
+            ageInHumanTextField.resignFirstResponder()                    //tidy up
+            ageInHumanTextField.hidden = true                             //hide the text fields
             dogNameTextField.hidden = true
-            
-            //show the label
-            ageInDogLabel.hidden = false
-            
-            //hide the convert button and show convert another
-            convertToDogButtonOutlet.hidden = true
+            ageInDogLabel.hidden = false                                  //show the label
+            convertToDogButtonOutlet.hidden = true                        //hide the convert button and show convert another
             covertAnotherButtonOutlet.hidden = false
             
-            }
-    }
+            }//end of this else
+         }//end of all completed block
+        
+}//end of function
     
     //clear everything
     @IBAction func converAnotherButtonPressed(sender: UIButton)
